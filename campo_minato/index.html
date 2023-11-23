@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campo Minato</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-panel">
+            <h1>CAMPO MINATO</h1>
+            <div class="score">
+                <span class="score-label">SCORE</span>
+                <span class="score-counter">00000</span>
+            </div>
+        </div>
+        <!-- tabellone di gioco -->
+        <div class="game-board">
+            <!-- creazione celle -->
+            <div class="grid"></div>
+
+            <!-- schermata di fine gioco -->
+            <div class="end-game-screen hidden">
+                <h2 class="end-game-text">Game<br>Over</h2>
+                <button class="play-again">Gioca ancora</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

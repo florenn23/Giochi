@@ -1,0 +1,138 @@
+/*
+COLOR PALETTE
+  black: rgb(0, 23, 50); #001732;
+  orange: rgb(241, 117, 78); #f1754e;
+  lightgreen: rgb(78, 241, 187); #4ef1bb;
+  bg-color: rgb(216, 238, 232);  #d8eee8;
+  bg-dark-color: rgb(203, 224, 221); #cbe0dd;
+  clicked-cell: rgb(157, 197, 199); #9dc5c7;
+*/
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* regole css */
+body {
+    padding: 16px;
+    line-height: 1;
+    color: #001732;
+    background-color: #d8eee8;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+button {
+    border: 2px solid #001732;
+    font-size: 24px;
+    font-family: 'Darker Grotesque', sans-serif;;
+    text-transform: uppercase;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(203, 224, 221);
+}
+
+.score {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* tabellone di gioco */
+
+.game-board {
+    border: 2px solid rgb(0, 23, 50);
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.game-container {
+    width: calc((48px * 6) + 4px);
+}
+
+.grid {
+    /* height: 480px; */
+    width: calc((48px * 6) + 4px);
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+}
+
+.cell {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    /* border: 1px dashed black; */
+}
+
+
+
+.cell-dark {
+    background-color: #cbe0dd;
+}
+
+.bar{
+    background-color: rgb(241, 117, 78);
+    border: 2px solid rgb(0, 23, 50);
+    border-radius: 8px;
+}
+.cell:hover,
+.cell-clicked {
+    background-color: #9dc5c7;
+}
+
+.cell-bomb {
+    background-color: #f1754e;
+    background-image: url(img/bomb.png);
+    background-size: contain;
+}
+
+.cell-clicked,
+.cell-bomb {
+    cursor: not-allowed;
+}
+
+/* schermata di fine gioco */
+.end-game-screen {
+    background-color: rgb(241, 117, 78, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.win {
+    background-color: rgb(78, 241, 187, 0.6);
+}
+
+.end-game-text {
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 16px;
+}
+
+.btn{
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
